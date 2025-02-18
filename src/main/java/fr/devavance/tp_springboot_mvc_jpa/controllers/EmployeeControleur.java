@@ -1,5 +1,6 @@
 package fr.devavance.tp_springboot_mvc_jpa.controllers;
 
+import fr.devavance.tp_springboot_mvc_jpa.beans.Employee;
 import fr.devavance.tp_springboot_mvc_jpa.dao.IEmployeeDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
@@ -13,10 +14,22 @@ public class EmployeeControleur {
     public EmployeeControleur(IEmployeeDAO employeeDAO) {
         this.employeeDAO = employeeDAO;
     }
+    @RequestMapping("/addemployee")
+    public String addEmployee(Employee e) {
 
-    @RequestMapping("/employes")
+        return "redirect:/";
+    }
+
+    @RequestMapping("/employees")
     public String findAllEmployee(Model m){
-        m.addAttribute("name",employeeDAO);
-        return "view_employes";
+        m.addAttribute("employees",employeeDAO.findAll());
+        m.addAttribute("employee",new Employee());
+        return "view_employees";
+    }
+
+    @RequestMapping("/")
+    public String home(Model m){
+        m.addAttribute("employees",employeeDAO.findAll());
+        return "view_home";
     }
 }

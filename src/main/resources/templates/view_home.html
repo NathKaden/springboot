@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Employes</title>
+</head>
+<body>
+<ul>
+    <li th:each="employee : ${employees}">
+        <p th:text="${employee.name}"  th:attr="style='color:' + ${employee.fonction.getCodeCouleur()}"></p>
+    </li>
+</ul>
+
+</body>
+</html>

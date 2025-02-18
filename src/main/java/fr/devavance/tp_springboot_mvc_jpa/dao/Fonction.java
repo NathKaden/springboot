@@ -8,7 +8,6 @@ public enum Fonction {
     SOFTWARE_ARCHITECT("orange");
     private final String codeCouleur;
 
-
     private Fonction(String codeCouleur) {
         this.codeCouleur = codeCouleur;
     }

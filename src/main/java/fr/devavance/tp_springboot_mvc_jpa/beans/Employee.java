@@ -9,13 +9,11 @@ import java.io.Serializable;
 
 @Getter
 @Setter
-@AllArgsConstructor
 public class Employee implements Serializable {
     private String name;
     private String address;
     private String email;
     private String phone;
-
     private Fonction fonction;
 
     public Employee(String name, String address, String email, String phone, Fonction function) {
@@ -26,4 +24,7 @@ public class Employee implements Serializable {
         this.fonction = function;
     }
 
+    public Employee() {
+
+    }
 }
