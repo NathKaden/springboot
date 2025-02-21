@@ -11,6 +11,7 @@ import java.io.Serializable;
 @Setter
 @AllArgsConstructor
 public class Employee implements Serializable {
+    private long id;
     private String name;
     private String address;
     private String email;
@@ -25,5 +26,7 @@ public class Employee implements Serializable {
         this.phone = phone;
         this.fonction = function;
     }
+
+    public Employee() {}
 
 }
