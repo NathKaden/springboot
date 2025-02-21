@@ -17,7 +17,7 @@ public class EmployeeControleur {
     
     @RequestMapping("/addemployee")
     public String addEmployee(Employee e) {
-        /*employee.save(e);*/
+        employee.save(e);
         return "redirect:/";
     }
 
