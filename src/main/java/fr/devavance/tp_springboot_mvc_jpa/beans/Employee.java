@@ -1,15 +1,12 @@
 package fr.devavance.tp_springboot_mvc_jpa.beans;
 
-import fr.devavance.tp_springboot_mvc_jpa.dao.Fonction;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
 
-@Data
-@Table(name = "employee")
+
 @Entity
+@Table(name = "employee")
+@Data
 public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
