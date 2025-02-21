@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Employees</title>
+</head>
+<body>
+<h1>Employé</h1>
+<a href="/employees">Ajouter un employé</a>
+
+<!--<ul>
+    <li th:each="employee: ${employees}">
+        <p th:text="${employee.name}"></p>
+    </li>
+</ul>-->
+<p th:text="${employee.get().id}"></p>
+<p th:text="${employee.get().name}"></p>
+<p th:text="${employee.get().address}"></p>
+<p th:text="${employee.get().email}"></p>
+<p th:text="${employee.get().phone}"></p>
+<p th:text="${employee.get().fonction}"></p>
+
+</body>
+</html>
