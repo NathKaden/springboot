@@ -29,7 +29,8 @@ public class EmployeeControleur implements IEmployeeController {
     @PostMapping("/addemployee")
     public String addEmployee(Employee e) {
         employee.save(e);
-        return "redirect:/employee/home";
+        String num = String.valueOf(e.getId());
+        return "redirect:/employee/"+num;
     }
 
     @Override

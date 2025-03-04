@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Employees</title>
-    <link rel="stylesheet" href="style.css">
+<!--    <link rel="stylesheet" href="style.css">-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/picnic">
 </head>
 <body>
 <h1>Liste des employées</h1>
@@ -32,10 +33,13 @@
         Téléphone
         <input type="text" th:field="*{phone}">
     </label>
-    <select name="color">
-        <option th:each="fonction : ${T(fr.devavance.tp_springboot_mvc_jpa.entity.Fonction).values()}"
-                th:value="${fonction}" th:text="${fonction}"></option>
-    </select>
+    <label>
+        <select th:field="*{fonction}" name="color">
+            <option th:each="fonction : ${T(fr.devavance.tp_springboot_mvc_jpa.enumeration.Fonction).values()}"
+                    th:value="${fonction}" th:text="${fonction}">
+            </option>
+        </select>
+    </label>
     <button type="submit">Ajouter</button>
 </form>
 </body>
